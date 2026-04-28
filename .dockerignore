@@ -1,0 +1,10 @@
+target/
+.git
+.gitignore
+.mvn
+*.md
+.DS_Store
+.classpath
+.factorypath
+.project
+.settings
