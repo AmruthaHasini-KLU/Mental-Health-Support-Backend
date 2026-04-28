@@ -42,6 +42,7 @@ public class SecurityConfig {
 
                 // ✅ Authorization rules
                 .authorizeHttpRequests(auth -> auth
+                    .requestMatchers("/", "/health", "/error", "/favicon.ico").permitAll()
                         .requestMatchers("/api/auth/**").permitAll()   // login/register
                         .requestMatchers("/api/test").permitAll()      // test endpoint
                         .requestMatchers("/api/doctor/**").hasRole("DOCTOR")
